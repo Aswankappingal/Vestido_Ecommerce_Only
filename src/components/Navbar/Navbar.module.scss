@@ -1,0 +1,77 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem 0;
+    transition: all 0.3s ease;
+
+    &.scrolled {
+        padding: 1rem 0;
+        background: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid var(--glass-border);
+    }
+
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+
+        span {
+            color: var(--accent);
+        }
+    }
+
+    .menu {
+        display: flex;
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        a {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: inline-block; // For MagneticButton wrapper
+
+            &:hover {
+                color: var(--foreground);
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .iconBtn {
+            background: none;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+}

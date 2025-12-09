@@ -1,0 +1,46 @@
+.gridSection {
+    padding: 4rem 0;
+    background: var(--background);
+
+    .header {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+
+            select {
+                background: transparent;
+                color: var(--foreground);
+                border: 1px solid var(--glass-border);
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                cursor: pointer;
+                outline: none;
+
+                &:focus {
+                    border-color: var(--accent);
+                }
+
+                option {
+                    background: #000;
+                }
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+}
