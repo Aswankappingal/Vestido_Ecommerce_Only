@@ -1,0 +1,35 @@
+.marquee {
+    width: 100%;
+    // background: var(--accent);
+    background-color: transparent !important;
+    color: #c5c2c2;
+    overflow: hidden;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 101;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.361);
+
+    .track {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll 20s linear infinite;
+
+        div {
+            margin-right: 50px;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

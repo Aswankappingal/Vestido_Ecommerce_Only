@@ -4,11 +4,11 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: 2rem 0;
+    padding: 0;
     transition: all 0.3s ease;
 
     &.scrolled {
-        padding: 1rem 0;
+        padding: 0;
         background: var(--glass-bg);
         backdrop-filter: blur(var(--glass-blur));
         -webkit-backdrop-filter: blur(var(--glass-blur));
@@ -19,6 +19,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 1.5rem 20px;
+        transition: padding 0.3s ease;
+    }
+
+    &.scrolled .navContainer {
+        padding: 1rem 20px;
     }
 
     .logo {

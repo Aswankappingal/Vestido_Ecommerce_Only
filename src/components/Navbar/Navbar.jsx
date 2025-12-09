@@ -8,6 +8,8 @@ import clsx from 'clsx';
 import MagneticButton from '../MagneticButton/MagneticButton';
 import MobileMenu from '../MobileMenu/MobileMenu';
 
+import Marquee from '../Marquee/Marquee';
+
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +33,7 @@ export default function Navbar() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
             >
+                <Marquee />
                 <div className={clsx("container", styles.navContainer)}>
                     <Link href="/" className={styles.logo}>
                         Vesti<span>do</span>
